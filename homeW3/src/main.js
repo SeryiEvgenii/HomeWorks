@@ -1,18 +1,5 @@
 ﻿// 1.
 
-
-/* let arr = [];
-
-function addToArray(arrParam, newElem) {
-	
-	arr.push(arrParam);
-	arr.push(newElem);
-	
-	console.log(arr);
-};
-
-addToArray(5, 6); */
-
 let arr = [];
 
 function addToArray(arrParam, newElem) {
@@ -113,14 +100,6 @@ fizzBuzz(21);
 
 
 //@@ SUPER 2
-
-/* 
-
-Напишите функцию, которая будет принимать 4 аргумента, последний всегда функция.
-Добавьте первые 3 аргумента в массив и вызовите переданную функцию с данным массивом
-
-*/
-
 
 function firstData(arg1, arg2, arg3, arg4) {
 	
