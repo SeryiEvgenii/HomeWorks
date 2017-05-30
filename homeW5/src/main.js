@@ -1,4 +1,4 @@
-﻿/*
+/*
  1. Переместите 0 в конец массива, остальные числа должны остаться
  неизменными
  .сoncat();
@@ -30,6 +30,7 @@ function moveZeroToEnd(arr) {
 
 moveZeroToEnd(arr1);
 
+
 /*
  2. Верните сумму двух найменьших чисел в массиве
  
@@ -40,7 +41,7 @@ moveZeroToEnd(arr1);
  
  */
 
-var arrStart = [-4, -10, 25, 10];
+var arrStart = [10, 20, 30, 1, 31, 11, 10];
  
 function minimalNumber(arr) {
 	
@@ -52,7 +53,6 @@ function minimalNumber(arr) {
 			
 			arr2.push(arr[i]);
 			arr.splice(i, 1);
-			i--;
 
 		};
 	
@@ -62,14 +62,13 @@ function minimalNumber(arr) {
 			
 	};
 	
-	console.log(arr2);
-	//console.log(arr2[1]);
-	//console.log(arr2[0] + arr2[1]);
 
-	
+	console.log(arr2[0] + arr2[1]);
+
 };
 
 minimalNumber(arrStart);
+
 
 /*
  3. Напишите функцию которая меняет местами имя и фамилию
@@ -77,6 +76,17 @@ minimalNumber(arrStart);
  nameShuffler('Arnold Schwarzenegger'); => "Schwarzenegger Arnold"
  nameShuffler('James Bond'); => "Bond James"
  */
+ 
+ function nameShuffler(arr){
+	 
+	console.log(arr.split(' ').reverse().join(' '));
+ };
+ 
+nameShuffler('john McClane');
+nameShuffler('Arnold Schwarzenegger');
+nameShuffler('James Bond');
+
+ 
 
 /*
  // !
@@ -85,7 +95,32 @@ minimalNumber(arrStart);
  capMe(['jo', 'nelson', 'jurie'])     // returns ['Jo', 'Nelson', 'Jurie']
  capMe(['KARLY', 'DANIEL', 'KELSEY']) // returns ['Karly', 'Daniel', 'Kelsey']
  */
+ 
+ function capMe(arr) {
+	
+	let lowCase = arr.join(' ').toLowerCase().split(' ');
+	
+	arr2 =[];
+	
+	for(let i = 0; i < lowCase.length; i++){
+		
+		let firstElem = lowCase[i].slice(0, 1).toUpperCase();
+		let firstIndexSlice = lowCase[i].slice(1);
+		
+		let concatElem = firstElem + firstIndexSlice;
+		
+		arr2[i] = concatElem;
+	};
+	
+	return console.log(arr2);
+	
+ };
 
+capMe(['jo', 'nelson', 'jurie']);
+capMe(['KARLY', 'DANIEL', 'KELSEY']);
+
+
+ 
 //@SUPER
 /*
  1. Найдите число отсутствующее в заданной последовательности
