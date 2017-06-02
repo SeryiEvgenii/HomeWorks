@@ -1,4 +1,4 @@
-/*
+﻿/*
  1. Переместите 0 в конец массива, остальные числа должны остаться
  неизменными
  .сoncat();
@@ -45,25 +45,8 @@ var arrStart = [10, 20, 30, 1, 31, 11, 10];
  
 function minimalNumber(arr) {
 	
-	var arr2 = [];
-	
-	for(let i = 0; i < arr.length; i++) {
-		
-		if(arr[i] === Math.min.apply(null, arr)) {
-			
-			arr2.push(arr[i]);
-			arr.splice(i, 1);
-
-		};
-	
-		if(arr2.length === 2){
-			break;
-		}; 
-			
-	};
-	
-
-	console.log(arr2[0] + arr2[1]);
+	let sort = arr.sort();
+	console.log(sort[0] + sort[1]);
 
 };
 
@@ -152,4 +135,13 @@ random([4, 6, 8, 10]);
  
  */
 
-function openBraces(arr) {}
+function openBraces(arr) {
+	
+	
+	
+	console.log(arr)
+	return arr
+}
+
+openBraces([[1,2],[3,[4]],5, 10]);
+openBraces([25,10,[10,[15]]]);
