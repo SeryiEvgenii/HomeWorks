@@ -11,7 +11,8 @@ function addToArray(arrParam, newElem) {
 	console.log(arr);
 };
 
-addToArray(5, 6);
+addToArray(arr, 6);
+addToArray(arr, 8);
 
 
 // 2.
