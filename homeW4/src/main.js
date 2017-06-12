@@ -1,4 +1,4 @@
-﻿// 1.
+// 1.
 
 function numbersBetween(a, b) {
 	
@@ -76,3 +76,45 @@ function typeOfArr(arg) {
 };
 
 typeOfArr(arr);
+
+
+// @@SUPER@@.
+
+let array = Array.from({ length: 35 }).map(
+  (value, index) => (index % 2 ? { age: index + 2 } : { age: NaN })
+);
+
+function solution(arr) {
+		
+	for(let key in array){
+				
+		var elem = array[key];
+		
+		if(elem.age != elem.age){
+			elem.unknownAge = true;
+		};
+	};
+	
+	console.log(array);
+};
+
+solution(array);
+
+
+function newFunc(arg) {
+	
+	var newArray = [];
+	
+	for(let key in array){
+				
+		var el = array[key];
+		
+		if(el.unknownAge != undefined){
+			newArray.push(el);
+		};	
+	};
+	
+	console.log(newArray);	
+};
+
+newFunc(array);
