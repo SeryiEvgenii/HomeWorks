@@ -35,7 +35,8 @@ var dataBase = {
   password: {passDataBase: 'admin_7qwyn-data%$'},
   regUser: { 
     regNewUser: function() {
-      console.log("Пользователь зарегистрирован")
+      console.log("Пользователь зарегистрирован");
+      dataBase.__proto__ = guest;
     }
   }
 };
