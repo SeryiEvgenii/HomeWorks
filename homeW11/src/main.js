@@ -26,19 +26,24 @@ var user = {
 };
 var admin = {
   name: 'administrator',
-  adminEmail: 'admin@gmail.com'
+  email: {adminEmail: 'admin@gmail.com'}
 };
 var guest = {
   name: 'Guest'
 };
 var dataBase = {
-  dataBasePassword: 'admin_7qwyn-data%$'
+  password: {passDataBase: 'admin_7qwyn-data%$'},
+  regUser: { 
+    regNewUser: function() {
+      console.log("Пользователь зарегистрирован")
+    }
+  }
 };
 
-user.adminEmail = admin.adminEmail;
-admin.__proto__ = dataBase;
+user.__proto__ = admin.email;
 dataBase.__proto__ = user;
-user.__proto__ = guest;
+admin.__proto__ = dataBase.password;
+guest.__proto__ = dataBase.regUser;
 
 console.log(user);
 console.log(admin);
