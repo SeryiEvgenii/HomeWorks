@@ -106,7 +106,6 @@ const visualArray = arr => {
   let section = document.createElement('section');
   document.body.appendChild(section);
   section.innerHTML = html;
-  console.log(html);
 };
 
 visualArray(navigation);
